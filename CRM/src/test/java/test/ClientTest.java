@@ -20,12 +20,19 @@ public class ClientTest extends BaseTest {
 		  cp.clickClientLink();
 		  cp.addClientLink();
 		  cp.fillAddCompanyName(ExcelRead.getString(1, 0, "clienttestdata"));
+		  
 		  cp.fillAddAddress(ExcelRead.getString(1, 1, "clienttestdata"));
+		  
 		  cp.fillAddCity(ExcelRead.getString(1, 2, "clienttestdata"));
+		  
 		  cp.fillAddState(FakerUtility.state());
+		  
 		  cp.fillAddZip(ExcelRead.getNumeric(1, 4, "clienttestdata" ));
+		  
 		  cp.fillAddCountry(ExcelRead.getString(1, 5, "clienttestdata"));
+		  
 		  cp.fillAddPhone(FakerUtility.phoneNumber());
+		  
 		  cp.fillAddvatNo(ExcelRead.getNumeric(1, 7, "clienttestdata" ));
 		  cp.clickCurrencyDropDown();
 		  cp.selectCurrency();

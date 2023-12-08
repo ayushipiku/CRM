@@ -18,15 +18,17 @@ public class NotesTest extends BaseTest {
 	  NotesPage np=new NotesPage(driver);
 	  np.clickNoteLink();
 	  np.addClickButton();
-	  np.fillAddNoteForm(ExcelRead.getString(1, 0, "notestestdata"));
-	  np.fillAddDescription(ExcelRead.getString(1, 1, "notestestdata"));
+	 
+	  np.fillAddNoteForm(ExcelRead.getString(1, 0, "notesdata"));
+	 
+	  np.fillAddDescription(ExcelRead.getString(1, 1, "notesdata"));
 	  np.save();
 	  np.close();
 	  np.clickNoteLink();
 	  
 	 
-	  String expected ="obsqura";
-	  String actualtitle=np.enterSearchValue(ExcelRead.getString(1, 0, "notestestdata"));
+	  String expected ="veegaland";
+	  String actualtitle=np.enterSearchValue(ExcelRead.getString(1, 0, "notesdata"));
 	  Assert.assertEquals(actualtitle, expected, "Search is not successful");
 	  
 	  
@@ -38,8 +40,8 @@ public class NotesTest extends BaseTest {
 	  NotesPage np=new NotesPage(driver);
 	  np.clickNoteLink();
 	 
-	  String expected ="obsqura";
-	  String actualtitle=np.enterSearchValue(ExcelRead.getString(1, 0, "notestestdata"));
+	  String expected ="veegaland";
+	  String actualtitle=np.enterSearchValue(ExcelRead.getString(1, 0, "notesdata"));
 	  Assert.assertEquals(actualtitle, expected, "Search is not successful");
 	  }
   
@@ -50,8 +52,8 @@ public class NotesTest extends BaseTest {
 	  NotesPage np=new NotesPage(driver);
 	  np.clickNoteLink();
 	 
-	  String expected ="obsqura";
-	  String actulaTitle=np.doEdit(ExcelRead.getString(1, 2, "notestestdata"));
+	  String expected ="wonderland";
+	  String actulaTitle=np.doEdit(ExcelRead.getString(1, 3, "notesdata"));
 	  Assert.assertEquals(actulaTitle, expected, "edit is not  successful");
 	  
   }
@@ -64,7 +66,7 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	 
 	  String expected="No record found.";
-	  String actulaTitle=np.dodeleteNote(ExcelRead.getString(1, 2, "notestestdata"));
+	  String actulaTitle=np.dodeleteNote(ExcelRead.getString(1, 3, "notesdata"));
 	  Assert.assertEquals(actulaTitle, expected, "delete is not  successful");
 	   
 	  }
