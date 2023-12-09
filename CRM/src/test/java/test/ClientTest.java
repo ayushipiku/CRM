@@ -34,6 +34,7 @@ public class ClientTest extends BaseTest {
 		  cp.fillAddPhone(FakerUtility.phoneNumber());
 		  
 		  cp.fillAddvatNo(ExcelRead.getNumeric(1, 7, "clienttestdata" ));
+		  
 		  cp.clickCurrencyDropDown();
 		  cp.selectCurrency();
 		  cp.checkBox();

@@ -53,7 +53,7 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	 
 	  String expected ="wonderland";
-	  String actulaTitle=np.doEdit(ExcelRead.getString(1, 3, "notesdata"));
+	  String actulaTitle=np.doEdit(ExcelRead.getString(1, 2, "notesdata"));
 	  Assert.assertEquals(actulaTitle, expected, "edit is not  successful");
 	  
   }
@@ -66,7 +66,7 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	 
 	  String expected="No record found.";
-	  String actulaTitle=np.dodeleteNote(ExcelRead.getString(1, 3, "notesdata"));
+	  String actulaTitle=np.dodeleteNote(ExcelRead.getString(1, 2, "notesdata"));
 	  Assert.assertEquals(actulaTitle, expected, "delete is not  successful");
 	   
 	  }
