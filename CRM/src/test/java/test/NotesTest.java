@@ -19,16 +19,16 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	  np.addClickButton();
 	 
-	  np.fillAddNoteForm(ExcelRead.getString(1, 0, "notesdata"));
+	  np.fillAddNoteForm(ExcelRead.getString(12, 0, "logindata"));
 	 
-	  np.fillAddDescription(ExcelRead.getString(1, 1, "notesdata"));
+	  np.fillAddDescription(ExcelRead.getString(12, 1, "logindata"));
 	  np.save();
 	  np.close();
 	  np.clickNoteLink();
 	  
 	 
 	  String expected ="veegaland";
-	  String actualtitle=np.enterSearchValue(ExcelRead.getString(1, 0, "notesdata"));
+	  String actualtitle=np.enterSearchValue(ExcelRead.getString(12, 0, "logindata"));
 	  Assert.assertEquals(actualtitle, expected, "Search is not successful");
 	  
 	  
@@ -41,7 +41,7 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	 
 	  String expected ="veegaland";
-	  String actualtitle=np.enterSearchValue(ExcelRead.getString(1, 0, "notesdata"));
+	  String actualtitle=np.enterSearchValue(ExcelRead.getString(12, 0, "logindata"));
 	  Assert.assertEquals(actualtitle, expected, "Search is not successful");
 	  }
   
@@ -53,7 +53,7 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	 
 	  String expected ="wonderland";
-	  String actulaTitle=np.doEdit(ExcelRead.getString(1, 2, "notesdata"));
+	  String actulaTitle=np.doEdit(ExcelRead.getString(12, 2, "logindata"));
 	  Assert.assertEquals(actulaTitle, expected, "edit is not  successful");
 	  
   }
@@ -66,7 +66,7 @@ public class NotesTest extends BaseTest {
 	  np.clickNoteLink();
 	 
 	  String expected="No record found.";
-	  String actulaTitle=np.dodeleteNote(ExcelRead.getString(1, 2, "notesdata"));
+	  String actulaTitle=np.dodeleteNote(ExcelRead.getString(12, 2, "logindata"));
 	  Assert.assertEquals(actulaTitle, expected, "delete is not  successful");
 	   
 	  }

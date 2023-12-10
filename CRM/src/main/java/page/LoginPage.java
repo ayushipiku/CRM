@@ -38,7 +38,7 @@ WebDriver driver;
          elementutil.doSendKeys(passwordfield, password);
 		
 		 elementutil.doClick(submit);
-		 submit.click();
+		 //submit.click();
 	}
 
 }

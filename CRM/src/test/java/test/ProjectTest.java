@@ -20,19 +20,19 @@ public class ProjectTest extends BaseTest {
 	  pg.clickProjectLink();
 	  pg.clickAddProjectButton();
 	  
-	  pg.addClientTitle(ExcelRead.getString(1, 0, "projecttestdata"));
+	  pg.addClientTitle(ExcelRead.getString(8, 0, "logindata"));
 	  
-	  pg.addClientDescription(ExcelRead.getString(1, 1, "projecttestdata"));
+	  pg.addClientDescription(ExcelRead.getString(8, 1, "logindata"));
 	  
-	  pg.addStartDate(ExcelRead.getNumeric(1, 2, "projecttestdata" ));
+	  pg.addStartDate(ExcelRead.getNumeric(8, 2, "logindata" ));
 	 
-	  pg.addEndtDate(ExcelRead.getNumeric(1, 3, "projecttestdata" ));
+	  pg.addEndtDate(ExcelRead.getNumeric(8, 3, "logindata" ));
 	  
-	  pg.addPrice(ExcelRead.getNumeric(1, 4, "projecttestdata" ));
+	  pg.addPrice(ExcelRead.getNumeric(8, 4, "logindata" ));
 	  pg.save();
 	  
 	  String expected ="obsqura";
-	  String actualtitle=pg.enterSearchValue(ExcelRead.getString(1, 0, "projecttestdata"));
+	  String actualtitle=pg.enterSearchValue(ExcelRead.getString(8, 0, "projecttestdata"));
 	  Assert.assertEquals(actualtitle, expected, "Add is not successful");
 	}
 	
@@ -44,7 +44,7 @@ public class ProjectTest extends BaseTest {
 		  pg.clickProjectLink();
 		  
 		  String expected ="obsqura";
-		  String actualtitle=pg.enterSearchValue(ExcelRead.getString(1, 0, "projecttestdata"));
+		  String actualtitle=pg.enterSearchValue(ExcelRead.getString(8, 0, "logindata"));
 		  Assert.assertEquals(actualtitle, expected, "Search is not successful");
 		  }
 	
