@@ -182,7 +182,7 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>jenkins_testng.xml</suiteXmlFile>
+                        <suiteXmlFile>multibrowsertestng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
